@@ -6,7 +6,7 @@ export interface IImage extends Document {
   secureURL: string; // URL is not a valid TypeScript type, using string instead
   width?: number;
   height?: number;
-  config?: Record<string, any>; // Represents an object with dynamic keys
+  config?: Record<string, string | number | boolean | null>; // More specific type for configuration
   transformationUrl?: string; // URL replaced with string
   aspectRatio?: string;
   color?: string;

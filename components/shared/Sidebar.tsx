@@ -29,7 +29,7 @@ const Sidebar = () => {
         <nav className="sidebar-nav">
           <SignedIn>
             <ul className="sidebar-nav_elements">
-              {navLinks.slice(0, 6).map((link, index) => {
+              {navLinks.slice(0, 6).map((link) => {
                 const isActive = link.route === pathname;
                 return (
                   <li 
@@ -53,7 +53,7 @@ const Sidebar = () => {
                 );
               })}
               </ul>
-              {navLinks.slice(6).map((link, index) => {
+              {navLinks.slice(6).map((link) => {
                 const isActive = link.route === pathname;
                 return (
                   <li 
