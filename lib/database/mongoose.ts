@@ -1,18 +1,19 @@
 import mongoose, { Mongoose } from 'mongoose';
 
 const MONGODB_URL = process.env.MONGODB_URL;
+
 interface MongooseConnection {
     conn: Mongoose | null;
     promise: Promise<Mongoose> | null;
 }
 
 declare global {
-   
-    
+    // eslint-disable-next-line no-var
     var mongoose: MongooseConnection | undefined;
 }
 
-const cached: MongooseConnection = global.mongoose || {  
+// Fix the type error by properly typing the global variable
+const cached: MongooseConnection = global.mongoose as MongooseConnection || {
     conn: null,
     promise: null,
 };
