@@ -36,7 +36,7 @@ const Sidebar = () => {
                     key={link.route} 
                     className={clsx(
                       'sidebar-nav_element group text-gray-700', 
-                      isActive && 'bg-red-500 text-white'
+                      isActive && 'bg-blue-500 text-white'
                     )}
                   >
                     <Link className="sidebar-link" href={link.route}>
@@ -60,7 +60,7 @@ const Sidebar = () => {
                     key={link.route} 
                     className={clsx(
                       'sidebar-nav_element group text-gray-700', 
-                      isActive && 'bg-red-500 text-white'
+                      isActive && 'bg-blue-500 text-white'
                     )}
                   >
                     <Link className="sidebar-link" href={link.route}>
